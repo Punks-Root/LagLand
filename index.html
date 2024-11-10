@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado del Servidor Minecraft</title>
+    <link rel="stylesheet" href="css/styles-index.css"> <!-- Ruta del archivo CSS -->
+</head>
+<body>
+
+    <!-- Barra de navegación superior -->
+    <nav class="navbar">
+        <ul>
+            <!---->
+            <li id="home-link"><a href="index.html">Inicio</a></li>
+            <li><a href="comunidad.html">Comunidad</a></li>
+            <li><a href="skins.html">Skins</a></li>
+            <li><a href="otros-servidores.html">Otros Servidores</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Estado del Servidor Minecraft</h1>
+    </header>
+    <main>
+        <div class="content-container">
+            <section class="main-content">
+                <!-- Contenido principal -->
+                <h2>Información del servidor</h2>
+                <p>Bienvenido al servidor Minecraft. Aquí puedes ver el estado y la IP del servidor.</p>
+            </section>
+    
+            <!-- Barra lateral a la derecha centrada -->
+            <aside class="right-sidebar">
+                <div id="server-status" class="status offline">Estado: Fuera de Línea</div>
+                <div class="players">
+                    <p><strong>Jugadores en línea:</strong> <span id="player-count">0</span></p>
+                </div>
+                <div class="server-ip">
+                    <p><strong>IP del Servidor:</strong></p>
+                    <p><span id="server-ip" class="copyable-ip">49.12.82.39:27177</span></p>
+                </div>
+            </aside>
+        </div>
+    </main>       
+    <footer>
+        <p>By Punks</p>
+    </footer>
+
+    <!-- Enlazamos al archivo JavaScript para obtener el estado del servidor -->
+    <script src="js/infoserv.js"></script>
+    <!-- Enlazamos al archivo JavaScript para copiar la IP -->
+    <script src="js/copiarIp.js"></script>
+    <script src="js/navbar.js"></script>
+
+</body>
+</html>
