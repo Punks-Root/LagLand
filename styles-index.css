@@ -116,3 +116,44 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Agregar los ajustes de Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .main-content, .right-sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    .server-ip {
+        font-size: 0.9rem;
+    }
+
+    .main-content, .right-sidebar {
+        font-size: 0.9rem;
+    }
+}
