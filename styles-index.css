@@ -21,9 +21,7 @@ h1 {
 
 main {
     padding: 20px;
-    margin-top: 70px; /* Ajuste para que el contenido no quede bajo la navbar */
-    display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
+    margin-top: 90px; /* Aumenta el margen superior para evitar la superposición */
 }
 
 /* Barra de navegación */
@@ -134,23 +132,36 @@ footer {
         margin-bottom: 20px;
     }
 }
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-
-    nav ul li {
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .navbar ul li {
+        display: block; /* Cambiar de inline a block para que los items de la navbar se apilen */
         margin: 10px 0;
     }
 
-    h1, h2 {
-        font-size: 1.5rem;
+    .right-sidebar {
+        width: 100%; /* La barra lateral ocupará el 100% del ancho en pantallas pequeñas */
+        position: relative; /* Cambia la posición absoluta a relativa para evitar que se desplace fuera de la vista */
+        top: 0;
+        left: 0;
+        transform: none; /* Elimina el centrado vertical */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar ul li a {
+        font-size: 1rem; /* Reduce el tamaño de la fuente en la barra de navegación */
     }
 
-    .server-ip {
-        font-size: 0.9rem;
+    .right-sidebar {
+        font-size: 1rem; /* Ajusta la fuente de la barra lateral */
+        padding: 10px; /* Reduce el padding para adaptarse mejor en pantallas más pequeñas */
     }
+
+    h1 {
+        font-size: 1.75rem; /* Ajusta el tamaño del título */
+    }
+}
 
     .main-content, .right-sidebar {
         font-size: 0.9rem;
